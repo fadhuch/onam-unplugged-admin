@@ -6,7 +6,7 @@ export const useVisitorApi = () => {
   const scanQRCode = async (qrId: string) => {
     try {
       const { data } = await $fetch(`${baseURL}/api/visitors/scan/${qrId}`, {
-        method: 'POST',
+        method: 'GET',
         headers: {
           'Content-Type': 'application/json'
         }
